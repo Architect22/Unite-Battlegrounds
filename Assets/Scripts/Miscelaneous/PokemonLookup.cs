@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PokemonLookup : MonoBehaviour
 {
@@ -17,7 +16,7 @@ public class PokemonLookup : MonoBehaviour
     [SerializeField] private TextMeshProUGUI Ult;
 
     public List<PlayablePokemon> playablePokemon;
-    public Dictionary<String, PlayablePokemon> PokemonList = new Dictionary<String, PlayablePokemon>();
+    public Dictionary<string, PlayablePokemon> PokemonList = new Dictionary<string, PlayablePokemon>();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,29 +26,34 @@ public class PokemonLookup : MonoBehaviour
             instance = this;
         }
 
-        // initialize the pokemon dictionary
-        PokemonList.Add("Lapras", playablePokemon[1]);
+        // initialize the pokemon dictionary and populate the pokemon selector dropdown
+        foreach (var pokemon in playablePokemon)
+        {
+            PokemonList.Add(pokemon.pokemonName, pokemon);
+            List<string> selectedOptions = new List<string>{ pokemon.pokemonName };
+            SelectedPokemonDropdown.AddOptions(selectedOptions);
+            Debug.Log(pokemon.pokemonName);
+        }
         UpdateMoveUI();
     }
 
     public void UpdateMoveUI()
     {
         int selectedIndex = SelectedPokemonDropdown.value;
-        List<TMP_Dropdown.OptionData> options = SelectedPokemonDropdown.options;
-        String pokemon = options[selectedIndex].text;
+        string pokemon = SelectedPokemonDropdown.options[selectedIndex].text;
 
-        PlayablePokemon playablePokemon = PokemonList[pokemon];
-        UpdateMoveDropdownUI(playablePokemon);
-
+        UpdateMoveDropdownUI(PokemonList[pokemon]);
     }
 
     private void UpdateMoveDropdownUI(PlayablePokemon pokemon)
     {
         Move1Dropdown.options[0].text = pokemon.Move1Options[0].AttackName;
         Move1Dropdown.options[1].text = pokemon.Move1Options[1].AttackName;
+        Move1Dropdown.RefreshShownValue();
 
         Move2Dropdown.options[0].text = pokemon.Move2Options[0].AttackName;
         Move2Dropdown.options[1].text = pokemon.Move2Options[1].AttackName;
+        Move2Dropdown.RefreshShownValue();
         UpdateMoveButtonUI();
     }
 

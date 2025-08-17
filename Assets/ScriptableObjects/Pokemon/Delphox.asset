@@ -12,3 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef70e56b30c1744d8aa96d2e0954fb8, type: 3}
   m_Name: Delphox
   m_EditorClassIdentifier: 
+  pokemonName: Delphox
+  Move1Options:
+  - {fileID: 11400000, guid: 581c7df9d2daaed4da61956576e7a10c, type: 2}
+  - {fileID: 11400000, guid: f996bccc4ca8a204087d77a9ecde8ae7, type: 2}
+  Move2Options:
+  - {fileID: 11400000, guid: 4c1f443811e2aaf47a8c6f94af0a5afb, type: 2}
+  - {fileID: 11400000, guid: 7f15b434716848045af98b5f580b1625, type: 2}
+  Ult: {fileID: 0}

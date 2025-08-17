@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef70e56b30c1744d8aa96d2e0954fb8, type: 3}
+  m_Name: Lapras
+  m_EditorClassIdentifier: 
+  pokemonName: Lapras
+  Move1Options:
+  - {fileID: 11400000, guid: e61f76500ca5afa44b1f5852606b76c7, type: 2}
+  - {fileID: 11400000, guid: 05bb5cb535286414aa3270bd2eba4072, type: 2}
+  Move2Options:
+  - {fileID: 11400000, guid: 1e73959b6951dc34bb5b28307e9f38f5, type: 2}
+  - {fileID: 11400000, guid: 0792adf9650d97c4da5d688b8ab22424, type: 2}
+  Ult: {fileID: 0}

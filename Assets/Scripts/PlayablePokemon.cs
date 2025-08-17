@@ -1,9 +1,12 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "PlayablePokemon", menuName = "Scriptable Objects/PlayablePokemon")]
 public class PlayablePokemon : ScriptableObject
 {
-    [SerializeField] private Move[] moves = new Move[7];
-
+    public String pokemonName = "";
+    public List<Move> Move1Options;
+    public List<Move> Move2Options;
+    public Move Ult;
 }

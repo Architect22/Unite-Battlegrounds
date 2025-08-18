@@ -8,7 +8,5 @@ public class PlayablePokemon : ScriptableObject
     public string pokemonName = "";
     public int level = 1;
     public float attackStat = 1;
-    public List<Move> Move1Options;
-    public List<Move> Move2Options;
-    public Move Ult;
+    public BaseEquations dmgEquations;
 }

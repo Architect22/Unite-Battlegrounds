@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd1baf239cf791e449e3d70847df4914, type: 3}
-  m_Name: BubbleBeam_Lapras
+  m_Script: {fileID: 11500000, guid: 671b95a437f665147a1dca3ed2fe29b2, type: 3}
+  m_Name: LaprasDmgEq
   m_EditorClassIdentifier: 
-  AttackName: Bubble Beam
-  AttackDamage: 0
-  Cooldown: 1
+  totalDmg: 0
+  pokemon: {fileID: 11400000, guid: de4db98b082aa1a4d93583e36907ac7c, type: 2}

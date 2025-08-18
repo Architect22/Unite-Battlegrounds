@@ -6,6 +6,7 @@ public class HealthBar : MonoBehaviour
     public Slider slider;
     [SerializeField] private GameObject fillArea;
     [SerializeField] private Objective objective;
+    [SerializeField] private CPUDamageBehavior cpu;
 
     private void Start()
     {
@@ -14,13 +15,20 @@ public class HealthBar : MonoBehaviour
         slider.value = slider.maxValue;
     }
 
-    public void DamageHealthbar(float damage)
+    public void DamageHealthbar(float damage, string killSource)
     {
         slider.value -= damage;
         if (slider.value - damage <= 0)
         {
+            cpu.ClearInvokes();
             slider.value = 0;
             fillArea.SetActive(false);
+            Debug.Log(killSource + " secured the objective!");
         }
+    }
+    public void Reset()
+    {
+        slider.value = slider.maxValue;
+        fillArea.SetActive(true); 
     }
 }

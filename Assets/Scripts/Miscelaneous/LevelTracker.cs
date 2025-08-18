@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,8 +8,16 @@ public class LevelTracker : MonoBehaviour
     [SerializeField] private Slider levelSlider;
     [SerializeField] private TextMeshProUGUI levelText;
 
-    public void OnSliderChanged()
+    public void OnLevelSliderChanged()
     {
-        levelText.text = levelSlider.value.ToString();
+        double number = Math.Round(levelSlider.value, 3);
+        levelText.text = number.ToString();
+        PokemonLookup.instance.activePokemon.level = (int)levelSlider.value;
+    }
+
+    public void OnSpeedSliderChanged()
+    {
+        double number = Math.Round(levelSlider.value, 3);
+        levelText.text = number.ToString();
     }
 }

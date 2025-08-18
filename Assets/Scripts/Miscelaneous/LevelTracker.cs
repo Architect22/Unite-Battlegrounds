@@ -20,4 +20,10 @@ public class LevelTracker : MonoBehaviour
         double number = Math.Round(levelSlider.value, 3);
         levelText.text = number.ToString();
     }
+
+    public void OnDamageSliderChanged()
+    {
+        double number = Math.Round(levelSlider.value, 2);
+        levelText.text = number.ToString();
+    }
 }

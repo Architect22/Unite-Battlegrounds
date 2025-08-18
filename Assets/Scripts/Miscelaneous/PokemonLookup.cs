@@ -13,6 +13,7 @@ public class PokemonLookup : MonoBehaviour
     [SerializeField] private TextMeshProUGUI Move1;
     [SerializeField] private TextMeshProUGUI Move2;
     [SerializeField] private TextMeshProUGUI Ult;
+    [SerializeField] private SpriteRenderer activePokemonSprite;
 
     public List<PlayablePokemon> playablePokemon;
     public Dictionary<string, PlayablePokemon> PokemonList = new Dictionary<string, PlayablePokemon>();
@@ -31,7 +32,7 @@ public class PokemonLookup : MonoBehaviour
         foreach (var pokemon in playablePokemon)
         {
             PokemonList.Add(pokemon.pokemonName, pokemon);
-            List<string> selectedOptions = new List<string>{ pokemon.pokemonName };
+            List<string> selectedOptions = new List<string> { pokemon.pokemonName };
             SelectedPokemonDropdown.AddOptions(selectedOptions);
         }
         UpdateMoveUI();
@@ -43,6 +44,7 @@ public class PokemonLookup : MonoBehaviour
         string pokemon = SelectedPokemonDropdown.options[selectedIndex].text;
         activePokemon = PokemonList[pokemon];
         UpdateMoveDropdownUI(PokemonList[pokemon]);
+        UpdatePokemonSprite();
     }
 
     private void UpdateMoveDropdownUI(PlayablePokemon pokemon)
@@ -62,5 +64,10 @@ public class PokemonLookup : MonoBehaviour
         Move1.text = Move1Dropdown.options[Move1Dropdown.value].text;
         Move2.text = Move2Dropdown.options[Move2Dropdown.value].text;
         Ult.text = activePokemon.dmgEquations.UltName;
+    }
+
+    public void UpdatePokemonSprite()
+    {
+        activePokemonSprite.sprite = activePokemon.pokemonSprite;
     }
 }

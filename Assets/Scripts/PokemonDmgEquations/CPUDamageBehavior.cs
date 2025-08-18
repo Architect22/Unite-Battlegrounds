@@ -3,8 +3,8 @@ using UnityEngine;
 public class CPUDamageBehavior : MonoBehaviour
 {
     [SerializeField] private TMP_Dropdown CpuDmgBehaviorDropdown;
-    [SerializeField] private float Lineardamage = 100;
     [SerializeField] private TextMeshProUGUI speed;
+    [SerializeField] private TextMeshProUGUI damage;
     private float tickTimer = 0.5f;
     private bool isDealingDamage = false;
 
@@ -45,12 +45,12 @@ public class CPUDamageBehavior : MonoBehaviour
 
     public void LinearDamage()
     {
-        AttackManager.instance.DealDamage(Lineardamage,"CPU");
+        AttackManager.instance.DealDamage(float.Parse(damage.text),"CPU");
     }
     public void LinearRandBurstDamage()
     {
         float randomDamage = Random.Range(0, 100);
-        AttackManager.instance.DealDamage(Lineardamage + randomDamage,"CPU");
+        AttackManager.instance.DealDamage(float.Parse(damage.text) + randomDamage,"CPU");
     }
     public void PredictRandBurstDamage()
     {

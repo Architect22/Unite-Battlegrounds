@@ -15,11 +15,5 @@ MonoBehaviour:
   pokemonName: Lapras
   level: 1
   attackStat: 1
-  Move1Options:
-  - {fileID: 11400000, guid: e61f76500ca5afa44b1f5852606b76c7, type: 2}
-  - {fileID: 11400000, guid: 05bb5cb535286414aa3270bd2eba4072, type: 2}
-  Move2Options:
-  - {fileID: 11400000, guid: 1e73959b6951dc34bb5b28307e9f38f5, type: 2}
-  - {fileID: 11400000, guid: 0792adf9650d97c4da5d688b8ab22424, type: 2}
-  Ult: {fileID: 0}
   dmgEquations: {fileID: 11400000, guid: 8a6e6bd887184df4c81b55b612ad7752, type: 2}
+  pokemonSprite: {fileID: 8224137909075614599, guid: 1a2b21c4976e2794faddd6610e48fe6d, type: 3}

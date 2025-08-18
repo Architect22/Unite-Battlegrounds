@@ -6,9 +6,6 @@ public class AttackManager : MonoBehaviour
     [SerializeField] private HealthBar healthBar;
     public static AttackManager instance;
 
-    // put an animation curve in here for cpu damage behavior?
-    public AnimationCurve cpuDamageBehavior;
-
     private void Awake()
     {
         if (instance == null)
@@ -17,7 +14,6 @@ public class AttackManager : MonoBehaviour
         }
     }
 
-    // pass a custom class into this function so that you can use multiple equations in one call
     public void DealDamage(float damage, string killSource)
     {
         healthBar.DamageHealthbar(damage, killSource);

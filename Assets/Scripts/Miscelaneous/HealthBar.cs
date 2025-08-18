@@ -9,6 +9,7 @@ public class HealthBar : MonoBehaviour
     [SerializeField] private Objective objective;
     [SerializeField] private CPUDamageBehavior cpu;
     [SerializeField] private TextMeshProUGUI displayText;
+    private bool isSecured = false;
 
     private void Start()
     {
@@ -21,8 +22,9 @@ public class HealthBar : MonoBehaviour
     public void DamageHealthbar(float damage, string killSource)
     {
         slider.value -= damage;
-        if (slider.value - damage <= 0)
+        if (slider.value - damage <= 0 && !isSecured)
         {
+            isSecured = true;
             cpu.ClearInvokes();
             slider.value = 0;
             fillArea.SetActive(false);
@@ -33,6 +35,7 @@ public class HealthBar : MonoBehaviour
     }
     public void Reset()
     {
+        isSecured = false;
         slider.value = slider.maxValue;
         fillArea.SetActive(true); 
         displayText.gameObject.SetActive(false);

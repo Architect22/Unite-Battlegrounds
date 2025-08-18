@@ -45,6 +45,7 @@ public class PokemonLookup : MonoBehaviour
         activePokemon = PokemonList[pokemon];
         UpdateMoveDropdownUI(PokemonList[pokemon]);
         UpdatePokemonSprite();
+        activePokemon.dmgEquations.ResetCooldowns();
     }
 
     private void UpdateMoveDropdownUI(PlayablePokemon pokemon)

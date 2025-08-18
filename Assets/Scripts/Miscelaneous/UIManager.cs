@@ -1,19 +1,37 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject playerStats;
     [SerializeField] private GameObject cpuStats;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Tweener playerTween;
+    [SerializeField] private Tweener cpuTween;
 
-    // Update is called once per frame
-    void Update()
+    private bool isPlayerStatsShowing = true;
+    private bool isCPUStatsShowing = true;
+
+    public void OnPlayerBtnPressed()
     {
-        
+        if (isPlayerStatsShowing && !playerTween.isAnimating)
+        {
+            playerTween.Move(-1, false);
+        }
+        else
+        {
+            playerTween.Move(1, false);
+        }
+        isPlayerStatsShowing = !isPlayerStatsShowing;
+    }
+    public void OnCpuBtnPressed()
+    {
+        if (isCPUStatsShowing && !cpuTween.isAnimating)
+        {
+            cpuTween.Move(1, false);
+        }
+        else
+        {
+            cpuTween.Move(-1, false);
+        }
+        isCPUStatsShowing = !isCPUStatsShowing;
     }
 }

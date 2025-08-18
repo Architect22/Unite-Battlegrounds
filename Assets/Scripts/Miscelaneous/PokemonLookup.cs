@@ -32,7 +32,6 @@ public class PokemonLookup : MonoBehaviour
             PokemonList.Add(pokemon.pokemonName, pokemon);
             List<string> selectedOptions = new List<string>{ pokemon.pokemonName };
             SelectedPokemonDropdown.AddOptions(selectedOptions);
-            Debug.Log(pokemon.pokemonName);
         }
         UpdateMoveUI();
     }

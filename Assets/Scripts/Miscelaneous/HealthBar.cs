@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,12 +8,14 @@ public class HealthBar : MonoBehaviour
     [SerializeField] private GameObject fillArea;
     [SerializeField] private Objective objective;
     [SerializeField] private CPUDamageBehavior cpu;
+    [SerializeField] private TextMeshProUGUI displayText;
 
     private void Start()
     {
         fillArea.SetActive(true);
         slider.maxValue = objective.health;
         slider.value = slider.maxValue;
+        displayText.gameObject.SetActive(false);
     }
 
     public void DamageHealthbar(float damage, string killSource)
@@ -24,11 +27,14 @@ public class HealthBar : MonoBehaviour
             slider.value = 0;
             fillArea.SetActive(false);
             Debug.Log(killSource + " secured the objective!");
+            displayText.gameObject.SetActive(true);
+            displayText.text = killSource + " secured the objective!";
         }
     }
     public void Reset()
     {
         slider.value = slider.maxValue;
         fillArea.SetActive(true); 
+        displayText.gameObject.SetActive(false);
     }
 }

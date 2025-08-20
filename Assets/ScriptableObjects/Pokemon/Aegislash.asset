@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef70e56b30c1744d8aa96d2e0954fb8, type: 3}
+  m_Name: Aegislash
+  m_EditorClassIdentifier: 
+  pokemonName: Aegislash
+  level: 1
+  attackStat: 1
+  dmgEquations: {fileID: 11400000, guid: 25b3533e918f72f45b112ce208e639d0, type: 2}
+  pokemonSprite: {fileID: 2543758105747297884, guid: bf823a8a73ecc2a49b7b1f2f71a5045e, type: 3}

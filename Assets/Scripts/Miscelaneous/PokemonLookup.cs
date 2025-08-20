@@ -8,6 +8,9 @@ public class PokemonLookup : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private TMP_Dropdown SelectedPokemonDropdown;
+    [SerializeField] private TMP_Dropdown heldItem1;
+    [SerializeField] private TMP_Dropdown heldItem2;
+    [SerializeField] private TMP_Dropdown heldItem3;
     public TMP_Dropdown Move1Dropdown;
     public TMP_Dropdown Move2Dropdown;
     [SerializeField] private TextMeshProUGUI Move1;
@@ -16,6 +19,7 @@ public class PokemonLookup : MonoBehaviour
     [SerializeField] private SpriteRenderer activePokemonSprite;
 
     public List<PlayablePokemon> playablePokemon;
+    public List<Item> heldItems;
     public Dictionary<string, PlayablePokemon> PokemonList = new Dictionary<string, PlayablePokemon>();
 
     [HideInInspector] public PlayablePokemon activePokemon;
@@ -34,6 +38,13 @@ public class PokemonLookup : MonoBehaviour
             PokemonList.Add(pokemon.pokemonName, pokemon);
             List<string> selectedOptions = new List<string> { pokemon.pokemonName };
             SelectedPokemonDropdown.AddOptions(selectedOptions);
+        }
+        foreach (var item in heldItems)
+        {
+            List<string> itemOptions = new List<string> { item.itemName };
+            heldItem1.AddOptions(itemOptions);
+            heldItem2.AddOptions(itemOptions);
+            heldItem3.AddOptions(itemOptions);
         }
         UpdateMoveUI();
     }

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1e907209f301374086fe44f74cb6343, type: 3}
+  m_Name: AegislashDmgEq
+  m_EditorClassIdentifier: 
+  totalDmg: 0
+  Move1Names:
+  - Sacred Sword
+  - Shadow Claw
+  Move2Names:
+  - Wide Guard
+  - Iron Head
+  usedMove1: 0
+  usedMove2: 0
+  usedUlt: 0
+  enhancedMove1: 0
+  enhancedMove2: 0
+  UltName: Coup de Grace
+  pokemon: {fileID: 11400000, guid: 968b92ee57cf580418c30a27229de8cb, type: 2}

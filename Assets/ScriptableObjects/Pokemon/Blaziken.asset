@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef70e56b30c1744d8aa96d2e0954fb8, type: 3}
+  m_Name: Blaziken
+  m_EditorClassIdentifier: 
+  pokemonName: Blaziken
+  level: 1
+  attackStat: 1
+  dmgEquations: {fileID: 11400000, guid: bc7ee81f395e853468a027b241e3bc26, type: 2}
+  pokemonSprite: {fileID: -7171891012421000349, guid: 16d0f44b57b770945a4908b0bda7cf11, type: 3}

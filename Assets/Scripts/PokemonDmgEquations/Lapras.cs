@@ -9,7 +9,7 @@ public class Lapras : BaseEquations
         Move2Names = new List<string> { "Bubble Beam", "Ice Beam" };
         UltName = "Lapras Express";
     }
-    public override void CalculateMove1Dmg(int index)
+    public override void CalculateMove1Dmg(int index, bool enhanced)
     {
         usedMove1 = true;
         if (index == 0)
@@ -23,7 +23,7 @@ public class Lapras : BaseEquations
             totalDmg = (float)(0.828 * pokemon.attackStat) + (9 * (pokemon.level - 1)) + 282;
         }
     }
-    public override void CalculateMove2Dmg(int index)
+    public override void CalculateMove2Dmg(int index, bool enhanced)
     {
         usedMove2 = true;
         if (index == 0)
@@ -96,11 +96,5 @@ public class Lapras : BaseEquations
                 pokemon.attackStat = 1;
                 break;
         }
-    }
-    public override void ResetCooldowns()
-    {
-        usedMove1 = false;
-        usedMove2 = false;
-        usedUlt = false;
     }
 }

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a6efd4616da6c14e8eeb34d77cef1f8, type: 3}
+  m_Name: InteleonDmgEq
+  m_EditorClassIdentifier: 
+  totalDmg: 0
+  Move1Names:
+  - Fell Stinger
+  - Acrobatics
+  Move2Names:
+  - Snipe Shot
+  - Liquidation
+  usedMove1: 0
+  usedMove2: 0
+  usedUlt: 0
+  enhancedMove1: 0
+  enhancedMove2: 0
+  UltName: Azure Spy Vision
+  pokemon: {fileID: 11400000, guid: d1b8fc4c26bf7b74f9511a6ff39bc636, type: 2}

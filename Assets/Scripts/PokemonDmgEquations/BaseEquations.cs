@@ -10,13 +10,15 @@ public class BaseEquations : ScriptableObject
     public bool usedMove1 = false;
     public bool usedMove2 = false;
     public bool usedUlt = false;
+    public bool enhancedMove1 = false;
+    public bool enhancedMove2 = false;
     public string UltName;
     public PlayablePokemon pokemon;
-    public virtual void CalculateMove1Dmg(int index)
+    public virtual void CalculateMove1Dmg(int index, bool enhanced)
     {
 
     }
-    public virtual void CalculateMove2Dmg(int index)
+    public virtual void CalculateMove2Dmg(int index, bool enhanced)
     {
 
     }
@@ -30,6 +32,8 @@ public class BaseEquations : ScriptableObject
     }
     public virtual void ResetCooldowns()
     {
-        
+        usedMove1 = false;
+        usedMove2 = false;
+        usedUlt = false;
     }
 }

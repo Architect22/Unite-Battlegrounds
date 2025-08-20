@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea10481175f90a1468db77e2c23a57df, type: 3}
+  m_Name: UrshifuDmgEq
+  m_EditorClassIdentifier: 
+  totalDmg: 0
+  Move1Names:
+  - Wicked Blow
+  - Surging Strikes
+  Move2Names:
+  - Throat Chop
+  - Liquidation
+  usedMove1: 0
+  usedMove2: 0
+  usedUlt: 0
+  enhancedMove1: 0
+  enhancedMove2: 0
+  UltName: Ebon Fist
+  pokemon: {fileID: 11400000, guid: 7682dd0ce209c414e93b13231f2f81af, type: 2}
